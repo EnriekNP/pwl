@@ -10,15 +10,14 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('portofolios', function (Blueprint $table) {
-            $table->id();
-            $table->string('student_id', 9)->unique();
+        Schema::create('portofolio', function (Blueprint $table) {
+            $table->string('student_id', 9)->primary();
             $table->string('title', 150);
             $table->string('contribution', 45);
             $table->string('description', 400)->nullable();
             $table->string('place', 150);
             $table->string('certificate', 160)->nullable();
-            $table->foreign('student_id')->references('id')->on('students');
+            $table->foreign('student_id')->references('id')->on('student');
             $table->timestamps();
         });
     }

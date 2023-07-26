@@ -9,7 +9,7 @@
         <div>
             <x-input-label for="id" :value="__('Id')" />
             <x-text-input id="id" class="block mt-1 w-full" type="number" name="id" :value="old('id')" required
-                autofocus autocomplete="id" />
+                autofocus autocomplete="id" placeholder="Your Student Id"/>
             <x-input-error :messages="$errors->get('id')" class="mt-2" />
         </div>
 
@@ -18,7 +18,7 @@
             <x-input-label for="password" :value="__('Password')" />
 
             <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                autocomplete="current-password" />
+                autocomplete="current-password" placeholder="Your Secret Key"/>
 
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>

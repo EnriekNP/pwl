@@ -16,4 +16,8 @@ class Portofolio extends Model
         'certificate',
         'student_id'
     ];
+    protected $table = "portofolio";
+    public $incrementing = false;
+    protected $keyType = 'string';
+    protected $primaryKey = 'student_id';
 }
